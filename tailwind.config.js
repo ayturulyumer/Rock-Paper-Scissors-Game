@@ -4,6 +4,9 @@ export default {
   theme: {
     extend: {},
     colors: {},
+    fontFamily: {
+      body: ["Barlow Semi Condensed", "sans-serif"],
+    },
   },
   screens: {
     phone: "640px",
