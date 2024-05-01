@@ -5,14 +5,14 @@ export default {
     extend: {},
     colors: {},
     fontFamily: {
-      body: ["Barlow Semi Condensed", "sans-serif"],
+      body: ["Barlow Semi Condensed"],
     },
-  },
-  screens: {
-    phone: "640px",
-    tablet: "768px",
-    laptop: "1024px",
-    desktop: "1280px",
+    screens: {
+      phone: "425px",
+      tablet: "768px",
+      laptop: "1024px",
+      desktop: "1280px",
+    },
   },
   plugins: [require("daisyui")],
 };
