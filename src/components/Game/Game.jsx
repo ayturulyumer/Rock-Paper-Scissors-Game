@@ -3,7 +3,7 @@ export default function Game() {
     <main>
       <div className="relative">
         <img
-          className="w-60 h-60"
+          className="w-60 h-60 tablet:w-72 tablet:h-72 desktop:w-96 desktop:h-96"
           src="./src/assets/images/bg-pentagon.svg"
           alt="pentagon"
         />
