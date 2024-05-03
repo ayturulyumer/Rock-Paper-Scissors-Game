@@ -14,14 +14,14 @@ export default function Game() {
             alt="scissor"
           />
         </div>
-        <div className="w-24 h-24 flex items-center bg-[#ffffff] justify-center border-[12px] border-[#4865f4] absolute top-[45px] left-[100%] cursor-pointer rounded-full transform -translate-x-1/2 tablet:w-28 tablet:h-28 desktop:w-36 desktop:h-36 desktop:border-[16px] desktop:top-[80px]">
+        <div className="w-24 h-24 flex items-center bg-[#ffffff] justify-center border-[12px] border-[#4865f4] absolute top-[55px] left-[100%] cursor-pointer rounded-full transform -translate-x-1/2 tablet:w-28 tablet:h-28 desktop:w-36 desktop:h-36 desktop:border-[16px] desktop:top-[80px]">
           <img
             className="w-9 h-9 tablet:w-12 tablet:h-12 desktop:w-14 desktop:h-14"
             src="./src/assets/images/icon-paper.svg"
             alt="scissor"
           />
         </div>
-        <div className="w-24 h-24 flex items-center bg-[#ffffff] justify-center border-[12px] border-[#40b9ce] absolute top-[50px] cursor-pointer  rounded-full transform -translate-x-1/2 tablet:w-28 tablet:h-28 desktop:w-36 desktop:h-36 desktop:border-[16px] desktop:top-[80px]">
+        <div className="w-24 h-24 flex items-center bg-[#ffffff] justify-center border-[12px] border-[#40b9ce] absolute top-[55px] cursor-pointer  rounded-full transform -translate-x-1/2 tablet:w-28 tablet:h-28 desktop:w-36 desktop:h-36 desktop:border-[16px] desktop:top-[80px]">
           <img
             className="w-9 h-9 tablet:w-12 tablet:h-12 desktop:w-14 desktop:h-14"
             src="./src/assets/images/icon-spock.svg"
