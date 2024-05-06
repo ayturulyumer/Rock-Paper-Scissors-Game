@@ -1,5 +1,5 @@
-export default function getBorderColor(playerHand) {
-  switch (playerHand) {
+export default function getBorderColor(hand) {
+  switch (hand) {
     case "rock":
       return "#dc2e4e";
     case "paper":
