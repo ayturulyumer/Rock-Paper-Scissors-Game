@@ -10,8 +10,8 @@ export default function GamePhase({ playerHand }) {
         <button className={`w-28 h-28 flex items-center bg-white justify-center border-[12px] border-[${getBorderColor(playerHand)}] rounded-full cursor-pointer shadow-gray  tablet:w-28 tablet:h-28 desktop:w-72 desktop:h-72 desktop:border-[35px]`}>
           <img
             className="w-12 h-12 tablet:w-12 tablet:h-12 desktop:w-28 desktop:h-28"
-            src="./src/assets/images/icon-scissors.svg"
-            alt="Scissors"
+            src={`./src/assets/images/icon-${playerHand}.svg`}
+            alt={playerHand}
           />
         </button>
       </div>
