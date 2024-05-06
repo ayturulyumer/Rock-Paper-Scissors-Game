@@ -4,7 +4,11 @@ const colors = require("tailwindcss/colors");
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        gray: "inset 1px 12px 5px rgba(186,191,210,1)",
+      },
+    },
     colors: {
       ...colors,
     },
