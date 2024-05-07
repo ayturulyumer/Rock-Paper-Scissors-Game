@@ -8,14 +8,14 @@ export default function HandSelection({ handleHandSelection }) {
           alt="pentagon"
         />
         <div
-          id="scissor"
+          id="scissors"
           className="w-24 h-24 flex items-center bg-[#ffffff] justify-center border-[12px] border-[#ec9e0e] absolute top-[-30px] left-[50%] cursor-pointer rounded-full transform -translate-x-1/2 tablet:w-28 tablet:h-28 desktop:w-36 desktop:h-36 desktop:border-[16px] "
           onClick={handleHandSelection}
         >
           <img
             className="w-9 h-9 tablet:w-12 tablet:h-12 desktop:w-14 desktop:h-14"
             src="./src/assets/images/icon-scissors.svg"
-            alt="scissor"
+            alt="scissors"
           />
         </div>
         <div
