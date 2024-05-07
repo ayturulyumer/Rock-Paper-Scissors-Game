@@ -18,11 +18,15 @@ export default function App() {
     setSelectedHand(handId);
   };
 
+console.log(selectedHand)
   return (
     <div className="h-screen w-screen flex flex-col items-center gap-24  font-body bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1f3756] to-[#141539]">
       <Header />
-      <HandSelection handleHandSelection={handleHandSelection} />
-      {/* <GamePhase playerHand={"spock"} /> */}
+      {selectedHand === null ? (
+        <HandSelection handleHandSelection={handleHandSelection} />
+      ) : (
+        <GamePhase playerHand={selectedHand} />
+      )}
       <Rules toggleShowModal={toggleShowModal} />
       {showModal && <RulesModal toggleShowModal={toggleShowModal} />}
     </div>
