@@ -1,5 +1,6 @@
 import getBorderColor from "../../utils/getBorderColor.js";
 import { useState, useEffect } from "react";
+import GameResultMessage from "../GameResultMessage/GameResultMessage.jsx";
 
 const hands = ["rock", "paper", "scissors", "lizard", "spock"];
 
@@ -13,17 +14,17 @@ export default function GamePhase({ playerHand }) {
     const shufflingInterval = setInterval(() => {
       handleShuffling();
     }, 200); // Interval for shuffling
-  
+
     const outcomeTimeout = setTimeout(() => {
       handleGameOutcome();
       clearInterval(shufflingInterval); // Clear the shuffling interval once the countdown is over
     }, countdown * 1000); // Countdown duration in milliseconds
-  
+
     return () => {
       clearInterval(shufflingInterval);
       clearTimeout(outcomeTimeout);
     };
-  }, [])
+  }, []);
 
   // Function to determine the outcome of the game
   const handleGameOutcome = () => {
@@ -31,7 +32,7 @@ export default function GamePhase({ playerHand }) {
     const computerHand = hands[randomIndex];
     setComputerHand(computerHand);
     if (playerHand === computerHand) {
-      setResult("draw");
+      setResult("it's a draw");
     } else if (
       (playerHand === "rock" &&
         (computerHand === "scissors" || computerHand === "lizard")) ||
@@ -44,9 +45,9 @@ export default function GamePhase({ playerHand }) {
       (playerHand === "spock" &&
         (computerHand === "rock" || computerHand === "scissors"))
     ) {
-      setResult("win");
+      setResult("you win");
     } else {
-      setResult("lose");
+      setResult("you lose");
     }
   };
 
@@ -57,9 +58,9 @@ export default function GamePhase({ playerHand }) {
   };
 
   return (
-    <section className="w-screen h-auto flex justify-center gap-20">
-      <div className="flex flex-col gap-4 items-center">
-        <h1 className="uppercase text-white order-last laptop:order-first desktop:text-3xl desktop: mb-14">
+    <section className="w-screen h-auto flex justify-center flex-wrap gap-20 ">
+      <div className="flex flex-col gap-4 items-center basis-1/4 laptop:basis-4/12">
+        <h1 className="uppercase text-white order-last desktop::order-first desktop:text-3xl desktop: mb-14">
           You picked
         </h1>
         <button
@@ -75,14 +76,12 @@ export default function GamePhase({ playerHand }) {
         </button>
       </div>
       {result && (
-        <div className="text-white">
-          {result === "win" && <p>You win!</p>}
-          {result === "lose" && <p>You lose!</p>}
-          {result === "draw" && <p>It's a draw!</p>}
+        <div className="hidden self-center desktop:block">
+          <GameResultMessage result={result} />
         </div>
       )}
-      <div className="flex flex-col gap-4 items-center">
-        <h1 className="uppercase text-white order-last laptop:order-first desktop:text-3xl desktop:mb-14">
+      <div className="flex flex-col gap-4 items-center basis-1/4 laptop:basis-4/12">
+        <h1 className="uppercase text-white order-last desktop::order-first desktop:text-3xl desktop:mb-14">
           The House Picked
         </h1>
         <button
@@ -97,6 +96,11 @@ export default function GamePhase({ playerHand }) {
           />
         </button>
       </div>
+      {result && (
+        <div className="flex-wrap desktop:hidden">
+          <GameResultMessage result={result} />
+        </div>
+      )}
     </section>
   );
 }
