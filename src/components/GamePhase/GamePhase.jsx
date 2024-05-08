@@ -18,7 +18,7 @@ export default function GamePhase({
   useEffect(() => {
     const shufflingInterval = setInterval(() => {
       handleShuffling();
-    }, 200); // Interval for shuffling
+    }, 100); // Interval for shuffling
 
     const outcomeTimeout = setTimeout(() => {
       handleGameOutcome();
