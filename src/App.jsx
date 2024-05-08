@@ -8,6 +8,17 @@ import GamePhase from "./components/GamePhase/GamePhase.jsx";
 export default function App() {
   const [showModal, setShowModal] = useState(false);
   const [selectedHand, setSelectedHand] = useState(null);
+  const [score, setScore] = useState(0);
+
+  const increaseScore = () => {
+    setScore(score + 1);
+  };
+
+  const decreaseScore = () => {
+    if (score > 1) {
+      setScore(score - 1);
+    }
+  };
 
   const toggleShowModal = () => {
     setShowModal(!showModal);
@@ -18,9 +29,8 @@ export default function App() {
     setSelectedHand(handId);
   };
 
-console.log(selectedHand)
   return (
-    <div className="h-screen w-screen flex flex-col items-center gap-24  font-body bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1f3756] to-[#141539]">
+    <div className="min-h-screen w-screen flex flex-col items-center gap-24  font-body bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1f3756] to-[#141539]">
       <Header />
       {selectedHand === null ? (
         <HandSelection handleHandSelection={handleHandSelection} />
