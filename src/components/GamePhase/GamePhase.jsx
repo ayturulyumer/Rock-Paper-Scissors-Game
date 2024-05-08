@@ -4,7 +4,11 @@ import GameResultMessage from "../GameResultMessage/GameResultMessage.jsx";
 
 const hands = ["rock", "paper", "scissors", "lizard", "spock"];
 
-export default function GamePhase({ playerHand }) {
+export default function GamePhase({
+  playerHand,
+  increaseScore,
+  decreaseScore,
+}) {
   const [computerHand, setComputerHand] = useState("rock");
   const [result, setResult] = useState(null);
   const [countdown, setCountdown] = useState(3);
@@ -46,8 +50,10 @@ export default function GamePhase({ playerHand }) {
         (computerHand === "rock" || computerHand === "scissors"))
     ) {
       setResult("you win");
+      increaseScore();
     } else {
       setResult("you lose");
+      decreaseScore();
     }
   };
 
