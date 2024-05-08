@@ -59,7 +59,7 @@ export default function GamePhase({ playerHand }) {
 
   return (
     <section className="w-screen h-auto flex justify-center flex-wrap gap-20 ">
-      <div className="flex flex-col gap-4 items-center basis-1/4 laptop:basis-4/12">
+      <div className="flex flex-col gap-4 items-center basis-1/4 tablet:basis-4/12 laptop:basis-5/12 desktop:basis-0">
         <h1 className="uppercase text-white order-last desktop::order-first desktop:text-3xl desktop: mb-14">
           You picked
         </h1>
@@ -80,7 +80,7 @@ export default function GamePhase({ playerHand }) {
           <GameResultMessage result={result} />
         </div>
       )}
-      <div className="flex flex-col gap-4 items-center basis-1/4 laptop:basis-4/12">
+      <div className="flex flex-col gap-4 items-center basis-1/4 tablet:basis-4/12 laptop:basis-5/12 desktop:basis-0">
         <h1 className="uppercase text-white order-last desktop::order-first desktop:text-3xl desktop:mb-14">
           The House Picked
         </h1>
