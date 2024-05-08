@@ -8,6 +8,7 @@ export default function GamePhase({
   playerHand,
   increaseScore,
   decreaseScore,
+  playAgain
 }) {
   const [computerHand, setComputerHand] = useState("rock");
   const [result, setResult] = useState(null);
@@ -83,7 +84,7 @@ export default function GamePhase({
       </div>
       {result && (
         <div className="hidden self-center desktop:block">
-          <GameResultMessage result={result} />
+          <GameResultMessage result={result} playAgain={playAgain} />
         </div>
       )}
       <div className="flex flex-col gap-4 items-center basis-1/4 tablet:basis-4/12 laptop:basis-5/12 desktop:basis-0">

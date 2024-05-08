@@ -15,13 +15,17 @@ export default function App() {
   };
 
   const decreaseScore = () => {
-    if (score > 1) {
+    if (score >= 1) {
       setScore(score - 1);
     }
   };
 
   const toggleShowModal = () => {
     setShowModal(!showModal);
+  };
+
+  const playAgain = () => {
+    setSelectedHand(null);
   };
 
   const handleHandSelection = (e) => {
@@ -31,11 +35,16 @@ export default function App() {
 
   return (
     <div className="min-h-screen w-screen flex flex-col items-center gap-24  font-body bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1f3756] to-[#141539]">
-      <Header />
+      <Header score={score} />
       {selectedHand === null ? (
         <HandSelection handleHandSelection={handleHandSelection} />
       ) : (
-        <GamePhase playerHand={selectedHand} />
+        <GamePhase
+          playerHand={selectedHand}
+          increaseScore={increaseScore}
+          decreaseScore={decreaseScore}
+          playAgain={playAgain}
+        />
       )}
       <Rules toggleShowModal={toggleShowModal} />
       {showModal && <RulesModal toggleShowModal={toggleShowModal} />}
