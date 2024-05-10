@@ -4,11 +4,21 @@ import HandSelection from "./components/HandSelection/HandSelection.jsx";
 import Rules from "./components/Rules/Rules.jsx";
 import RulesModal from "./components/RulesModal/RulesModal.jsx";
 import GamePhase from "./components/GamePhase/GamePhase.jsx";
+import { SCORE_STORAGE_KEY } from "./constants.js";
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
   const [selectedHand, setSelectedHand] = useState(null);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(() => {
+    const storedScore = localStorage.getItem(SCORE_STORAGE_KEY);
+    {/*If it exist return it's value as number*/}
+    if (storedScore !== null) {
+      return parseInt(storedScore);
+    }
+     {/* If it doesn't exist create it and return 0 as initial value */}
+    localStorage.setItem(SCORE_STORAGE_KEY, "0");
+    return 0;
+  });
 
   const increaseScore = () => {
     setScore(score + 1);
