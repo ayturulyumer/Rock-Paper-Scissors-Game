@@ -75,7 +75,7 @@ export default function GamePhase({
       <GamePhasePickedHand message={"The House Picked"} hand={computerHand} />
       {result && (
         <div className="flex-wrap desktop:hidden">
-          <GameResultMessage result={result} />
+          <GameResultMessage result={result} playAgain={playAgain} />
         </div>
       )}
     </section>
