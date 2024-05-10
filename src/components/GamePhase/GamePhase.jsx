@@ -8,6 +8,7 @@ export default function GamePhase({
   playerHand,
   increaseScore,
   decreaseScore,
+  resetScore,
   playAgain,
 }) {
   const [computerHand, setComputerHand] = useState("rock");
@@ -69,13 +70,13 @@ export default function GamePhase({
       <GamePhasePickedHand message={"You Picked"} hand={playerHand} />
       {result && (
         <div className="hidden self-center desktop:block">
-          <GameResultMessage result={result} playAgain={playAgain} />
+          <GameResultMessage result={result} playAgain={playAgain} resetScore={resetScore} />
         </div>
       )}
       <GamePhasePickedHand message={"The House Picked"} hand={computerHand} />
       {result && (
         <div className="flex-wrap desktop:hidden">
-          <GameResultMessage result={result} playAgain={playAgain} />
+          <GameResultMessage result={result} playAgain={playAgain} resetScore={resetScore} />
         </div>
       )}
     </section>
