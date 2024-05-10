@@ -1,6 +1,6 @@
 import getBorderColor from "../../utils/getBorderColor.js";
 
-export default function GamePhasePickedHand({ message, hand, ripple }) {
+export default function GamePhasePickedHand({ message, hand}) {
 
 
   return (
@@ -16,7 +16,7 @@ export default function GamePhasePickedHand({ message, hand, ripple }) {
         >
           <img
             className="w-12 h-12 tablet:w-12 tablet:h-12 desktop:w-28 desktop:h-28"
-            src={`./public/icon-${hand}.svg`}
+            src={`/icon-${hand}.svg`}
             alt={hand}
           /> 
         </button>

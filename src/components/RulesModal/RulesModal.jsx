@@ -11,7 +11,7 @@ export default function RulesModal({ toggleShowModal }) {
               </h2>
               <img
                 className="desktop:ml-10 desktop:h-80 desktop:w-80"
-                src="./public/image-rules-bonus.svg"
+                src="/image-rules-bonus.svg"
                 alt="rules"
               />
             </div>

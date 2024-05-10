@@ -4,7 +4,7 @@ export default function Header({ score }) {
       <section className="flex-1">
         <img
           className="p-6 h-24 w-24 tablet:h-36 tablet:w-36"
-          src="./public/logo-bonus.svg"
+          src="/logo-bonus.svg"
           alt="rules"
         />
       </section>
