@@ -8,6 +8,11 @@ export default function GameResultMessage({ result, playAgain }) {
       >
         <p className="uppercase tracking-widest text-[#3b4363]">Play Again</p>
       </button>
+      <button
+        className="h-12 w-56 bg-white border-2 rounded-md flex justify-center items-center cursor-pointer "
+      >
+        <p className="uppercase tracking-widest text-[#3b4363]">Reset Score</p>
+      </button>
     </div>
   );
 }
