@@ -5,7 +5,7 @@ export default function GamePhasePickedHand({ message, hand}) {
 
   return (
     <div className="flex flex-col gap-4 items-center basis-1/4 tablet:basis-4/12 laptop:basis-5/12 desktop:basis-0">
-      <h1 className="uppercase text-white order-last desktop::order-first desktop:text-3xl desktop: mb-14">
+      <h1 className="uppercase text-white order-last desktop:order-first desktop:text-3xl desktop: mb-14">
         {message}
       </h1>
 
