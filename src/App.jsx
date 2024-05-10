@@ -27,8 +27,12 @@ export default function App() {
   };
 
   const decreaseScore = () => {
-    const newScore = score - 1;
-    setScore(newScore < 0 ? 0 : newScore); // Ensure score is non-negative
+    let newScore = score - 1;
+    // Ensure score is non-negative
+    if (newScore < 0) {
+      newScore = 0;
+    }
+    setScore(newScore);
     localStorage.setItem(SCORE_STORAGE_KEY, newScore);
   };
 
@@ -60,6 +64,7 @@ export default function App() {
           playerHand={selectedHand}
           increaseScore={increaseScore}
           decreaseScore={decreaseScore}
+          resetScore={resetScore}
           playAgain={playAgain}
         />
       )}
