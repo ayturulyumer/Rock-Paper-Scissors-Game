@@ -11,23 +11,30 @@ export default function App() {
   const [selectedHand, setSelectedHand] = useState(null);
   const [score, setScore] = useState(() => {
     const storedScore = localStorage.getItem(SCORE_STORAGE_KEY);
-    {/*If it exist return it's value as number*/}
+    // If it exist return it's value as number
     if (storedScore !== null) {
       return parseInt(storedScore);
     }
-     {/* If it doesn't exist create it and return 0 as initial value */}
+    // If it doesn't exist create it and return 0 as initial value
     localStorage.setItem(SCORE_STORAGE_KEY, "0");
     return 0;
   });
 
   const increaseScore = () => {
-    setScore(score + 1);
+    const newScore = score + 1;
+    setScore(newScore);
+    localStorage.setItem(SCORE_STORAGE_KEY, newScore);
   };
 
   const decreaseScore = () => {
-    if (score >= 1) {
-      setScore(score - 1);
-    }
+    const newScore = score - 1;
+    setScore(newScore < 0 ? 0 : newScore); // Ensure score is non-negative
+    localStorage.setItem(SCORE_STORAGE_KEY, newScore);
+  };
+
+  const resetScore = () => {
+    setScore(0);
+    localStorage.setItem(SCORE_STORAGE_KEY, "0");
   };
 
   const toggleShowModal = () => {
