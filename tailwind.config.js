@@ -22,5 +22,4 @@ export default {
       desktop: "1280px",
     },
   },
-  plugins: [require("daisyui")],
 };
