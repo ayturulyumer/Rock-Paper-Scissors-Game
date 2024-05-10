@@ -16,7 +16,7 @@ export default function GamePhasePickedHand({ message, hand, ripple }) {
         >
           <img
             className="w-12 h-12 tablet:w-12 tablet:h-12 desktop:w-28 desktop:h-28"
-            src={`./src/assets/images/icon-${hand}.svg`}
+            src={`./public/icon-${hand}.svg`}
             alt={hand}
           /> 
         </button>

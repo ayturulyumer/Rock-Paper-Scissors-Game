@@ -4,7 +4,7 @@ export default function HandSelection({ handleHandSelection }) {
       <div className="relative">
         <img
           className="w-60 h-60 tablet:w-72 tablet:h-72 desktop:w-96 desktop:h-96"
-          src="./src/assets/images/bg-pentagon.svg"
+          src="./public/bg-pentagon.svg"
           alt="pentagon"
         />
         <div
@@ -14,7 +14,7 @@ export default function HandSelection({ handleHandSelection }) {
         >
           <img
             className="w-9 h-9 tablet:w-12 tablet:h-12 desktop:w-14 desktop:h-14"
-            src="./src/assets/images/icon-scissors.svg"
+            src="./public/icon-scissors.svg"
             alt="scissors"
           />
         </div>
@@ -25,7 +25,7 @@ export default function HandSelection({ handleHandSelection }) {
         >
           <img
             className="w-9 h-9 tablet:w-12 tablet:h-12 desktop:w-14 desktop:h-14"
-            src="./src/assets/images/icon-paper.svg"
+            src="./public/icon-paper.svg"
             alt="paper"
           />
         </div>
@@ -36,7 +36,7 @@ export default function HandSelection({ handleHandSelection }) {
         >
           <img
             className="w-9 h-9 tablet:w-12 tablet:h-12 desktop:w-14 desktop:h-14"
-            src="./src/assets/images/icon-spock.svg"
+            src="./public/icon-spock.svg"
             alt="spock"
           />
         </div>
@@ -47,7 +47,7 @@ export default function HandSelection({ handleHandSelection }) {
         >
           <img
             className="w-9 h-9 tablet:w-12 tablet:h-12 desktop:w-14 desktop:h-14"
-            src="./src/assets/images/icon-lizard.svg"
+            src="./public/icon-lizard.svg"
             alt="lizard"
           />
         </div>
@@ -58,7 +58,7 @@ export default function HandSelection({ handleHandSelection }) {
         >
           <img
             className="w-9 h-9 tablet:w-12 tablet:h-12 desktop:w-14 desktop:h-14"
-            src="./src/assets/images/icon-rock.svg"
+            src="./public/icon-rock.svg"
             alt="rock"
           />
         </div>
